@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
 
     // Command-line options take precedence:
     ParseParameters(argc, argv);
-		if (!filesystem::exists(GetDataDir() / "WenterCoin.conf"))
+		if (!boost::filesystem::exists(GetDataDir() / "WenterCoin.conf"))
 		{
 			boost::filesystem::path ConfigFile = GetDataDir() / "WenterCoin.conf";
 			FILE* file = fopen(ConfigFile.string().c_str(), "w");
